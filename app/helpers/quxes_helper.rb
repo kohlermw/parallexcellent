@@ -1,0 +1,2 @@
+module QuxesHelper
+end

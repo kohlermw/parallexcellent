@@ -1,0 +1,21 @@
+<%= form_for(@grault) do |f| %>
+  <% if @grault.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grault.errors.count, "error") %> prohibited this grault from being saved:</h2>
+
+      <ul>
+      <% @grault.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

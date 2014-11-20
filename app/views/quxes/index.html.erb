@@ -1,0 +1,25 @@
+<h1>Listing quxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quxes.each do |qux| %>
+      <tr>
+        <td><%= qux.name %></td>
+        <td><%= link_to 'Show', qux %></td>
+        <td><%= link_to 'Edit', edit_qux_path(qux) %></td>
+        <td><%= link_to 'Destroy', qux, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qux', new_qux_path %>
