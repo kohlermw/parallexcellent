@@ -1,4 +1,0 @@
-test:
-  override:
-    - "bundle exec rspec --pattern \"${RSPEC_PATTERN}\" --format documentation":
-        parallel: true
