@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
+
+gem 'rspec_junit_formatter', :git => 'git@github.com:circleci/rspec_junit_formatter.git'
