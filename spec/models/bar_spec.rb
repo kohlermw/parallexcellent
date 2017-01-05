@@ -5,7 +5,7 @@ RSpec.describe Bar, :type => :model do
     (1..2500).each do |n|
       Bar.create(name: "a")
     end
-    assert_equal(2501, Bar.where(name: "a").count)
+    assert_equal(2500, Bar.where(name: "a").count)
   end
   it "can create lots of Bars b" do
     (1..2500).each do |n|
